@@ -1,0 +1,118 @@
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: white;
+  background: #eeeeee;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --------------------------------
+
+Tooltip
+
+-------------------------------- */
+section {
+    width: 100%;
+    height: 100vh;
+    display: table;
+    .center {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        .trigger {
+            position: relative;
+            background: #893168;
+            width: 200px;
+            height: 60px;
+            display: inline-block;
+            border-radius: 50px;
+            box-shadow: 0 2px 20px rgba(0,0,0,.7), inset 0px 1px 0px rgba(255,255,255, 0.2);
+            color: white;
+
+            &:hover em {
+                top: -100%;
+            }
+            &:hover i {
+                top: 0;
+            }
+            em, i {
+                transition: top .3s;
+            }
+            span { //Anything moving outside the span will be not visible
+                overflow: hidden;
+            }
+            em {
+                line-height: 60px; // Equal to the height of the button
+                top: 0;
+            }
+            span, em, i {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+            }
+            i {
+                top: 100%;
+                background: url(../img/icon-download.svg) no-repeat center center;
+            }
+
+            &::before,
+            &::after {
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .4s;
+
+            }
+
+            &::before {
+                content: 'File size 50M';
+                background: #2e1c2b;
+                width: 140px;
+                height: 60px;
+                line-height: 60px;
+                border-radius: .25em;
+                bottom: 90px;
+                left: calc(50% - 70px);
+
+            }
+            &::after {
+                content: '';
+                width: 20px;
+                height: 20px;
+                border: 10px solid transparent;
+                border-top-color: #2e1c2b;
+                left: calc(50% - 10px);
+                bottom: 70px;
+            }
+            &:hover::before,
+            &:hover::after{
+                opacity: 1;
+                visibility: visible;
+            }
+            &:hover::before {
+                bottom: 80px;
+            }
+            &:hover::after {
+                bottom: 60px;
+            }
+        }
+    }
+}
