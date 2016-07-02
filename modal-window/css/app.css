@@ -1,0 +1,82 @@
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  line-height: 1;
+  color: #333545;
+  background-color: white;
+}
+
+section {
+	width: 90%;
+	margin: 0 auto;
+	padding: 2em 0;
+	line-height: 2;
+}
+
+a {
+	font-weight: bold;
+	color: #40508F;
+	transition: color .3s;
+}
+
+a:hover {
+	color: #333545;
+}
+
+#modal {
+	/* the modal is on top of the main content and covers the entire wieport*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .8);
+	/* hide the modal window */
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .2s, visibility .2s;
+}
+
+#modal.is-visible {
+	/* show the modal window */
+	opacity: 1;
+	visibility: visible;
+}
+
+#modal .content {
+	/* center modal content */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	/* content basic style */
+	width: 90%;
+	max-width: 400px;
+	padding: 2em;
+	background-color: #FFF;
+}
+
+#modal h2 {
+	margin-top: 0;
+}
+
+#modal p {
+	line-height: 1.3;
+}
+
+#modal button {
+	cursor: pointer;
+	border: 0;
+	border-radius: 2px;
+	color: #FFF;
+	background-color: #40508F;
+	padding: .5em .8em;
+	font-size: 14px;
+	font-weight: bold;
+	transition: background .3s;
+}
+
+#modal button:hover {
+	background-color: #333545;
+}
