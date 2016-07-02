@@ -9,3 +9,7 @@ Awesome tooltip effect after hovering over a button
 ## After hover
 
 ![after-hover](https://cloud.githubusercontent.com/assets/6425561/16532216/7fe37ad4-3f9e-11e6-8496-86ef810698a8.png)
+
+## Showcase  
+
+![tooltip](https://cloud.githubusercontent.com/assets/6425561/16541946/6881eb9a-4062-11e6-8ff9-e8f4fb7141f4.gif)
