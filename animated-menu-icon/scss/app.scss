@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    background: #212121;
+    display: table;
+    width: 100%;
+    height: 100vh;
+
+    & > div {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+
+        .trigger {
+            position: relative;
+            background: #444;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: none;
+
+            // img replacement
+            overflow: hidden; //everything outside of button won't be visible
+            text-indent: 100%; //moving the text outside of button
+            color: transparent;
+            white-space: nowrap; // so that there will be no break lines
+
+            cursor: pointer;
+            outline: none;
+
+            span {
+                position: absolute;
+                width: 44px;
+                height: 4px;
+                border-radius: 4px;
+                background: white;
+                top: calc(50% - 2px);
+                left: calc(50% - 22px);
+                transition: transform .3s;
+
+                &::before, &::after {
+                    position: absolute;
+                    width: 44px;
+                    height: 4px;
+                    border-radius: 4px;
+                    background: white;
+                    transition: transform .3s, width .2s ;
+                }
+
+                &::before {
+                    content: '';
+                    bottom: 12px;
+                    left: 0;
+                }
+                &::after {
+                    content: '';
+                    top: 12px;
+                    left: 0;
+                }
+            }
+
+            // On hover
+            &:hover span {
+                transform: rotate(180deg);
+            }
+
+            &:hover span::before {
+                transform: translateX(-2px) translateY(5px) rotate(-45deg);
+                width: 50%;
+            }
+            &:hover span::after {
+                transform: translateX(-2px) translateY(-5px) rotate(45deg);
+                width: 50%;
+            }
+        }
+    }
+}
