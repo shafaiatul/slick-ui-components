@@ -12,4 +12,4 @@ Awesome tooltip effect after hovering over a button
 
 ## Showcase  
 
-![tooltip](https://cloud.githubusercontent.com/assets/6425561/16541946/6881eb9a-4062-11e6-8ff9-e8f4fb7141f4.gif)
+![awesome-tooltip](https://cloud.githubusercontent.com/assets/6425561/16546491/3afe9d0e-411a-11e6-82ec-33983aa204bc.gif)
